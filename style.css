@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.5em;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
+
+.galeria {
+    margin: 2em;
+    display: flex;
+    height: 20em;
+    gap: 0.1em;
+}
+
+.galeria div {
+    flex: 1;
+background-size: cover;
+background-position: center center;
+transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.galeria div:hover{
+    flex: 3;
+}
+
+.galeria:hover div:not(:hover){
+    /* filter: grayscale(100%); */
+    /* filter: sepia(100%) grayscale(50%) invert(100%); */
+    filter: hue-rotate(240deg) ;
+}
